@@ -1,0 +1,53 @@
+# 📌 Git Setup
+git config --global user.name "Your Name"    # Set your Git username  
+git config --global user.email "your@email.com"  # Set your Git email  
+git config --global core.editor "vim"  # Set default editor (optional)  
+git config --list  # View Git configurations  
+
+# 📂 Initialize & Clone Repository
+git init  # Initialize a new Git repository  
+git clone <repo-url>  # Clone an existing repository  
+
+# 📥 Check Status & View Changes
+git status  # Check status of changes  
+git diff  # View changes before staging  
+git diff --staged  # View changes after staging  
+
+# 📤 Add & Commit Changes
+git add <file>  # Stage a specific file  
+git add .  # Stage all changes  
+git commit -m "Your commit message"  # Commit changes  
+git commit -am "Commit message"  # Add & commit in one step (for tracked files)  
+
+# 🔄 Undo Changes
+git restore <file>  # Discard unstaged changes  
+git reset HEAD <file>  # Unstage a file  
+git reset --hard HEAD~1  # Undo last commit (permanently)  
+git revert HEAD  # Create a new commit to undo the last commit  
+
+# 🌿 Branching & Merging
+git branch  # List all branches  
+git branch <branch-name>  # Create a new branch  
+git checkout <branch-name>  # Switch to another branch  
+git checkout -b <branch-name>  # Create & switch to a new branch  
+git merge <branch-name>  # Merge a branch into the current branch  
+git branch -d <branch-name>  # Delete a branch  
+
+# 🔄 Push & Pull Changes
+git remote -v  # View remote repository URLs  
+git push origin <branch-name>  # Push branch to remote  
+git pull origin <branch-name>  # Pull latest changes from remote  
+git fetch origin  # Fetch changes without merging  
+
+# 📌 Stashing Changes
+git stash  # Save changes without committing  
+git stash pop  # Apply stashed changes  
+git stash list  # Show saved stashes  
+git stash drop  # Remove a stash  
+
+# 🎯 Tagging & Releases
+git tag v1.0.0  # Create a lightweight tag  
+git tag -a v1.0.0 -m "Version 1.0.0"  # Create an annotated tag  
+git push --tags  # Push tags to remote  
+git tag -d v1.0.0  # Delete a local tag  
+git push --delete origin v1.0.0  # Delete a remote tag  
